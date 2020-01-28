@@ -37,7 +37,8 @@ prepare_data (image_rows, image_cols, data_path, "test" )
 Unet_model(batch_size, num_epoch,image_rows,image_cols)
 
 # =============================================================================
-#%%
+#%% 3) CONERVTING THE PREDICTION TO PNG IMAGES
 convert_arr_to_img()
-#%%
+# =============================================================================
+#%% 4) SHOWING THE SEGMENTATION ON THE TEST IMAGES
 visualize_segmentation()
