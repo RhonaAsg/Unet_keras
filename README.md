@@ -19,27 +19,27 @@ In order to keep it simple, the network does not include batch normalisation or 
 ### Data Preprocessing and training
 Preprocessing includes resizing each image to 512 x 1024 (If you would like to have different size change this parameter in the begining of train.py). The dataset images should be in the same folder with tif format. The mask images must be 1 channel images. The data should be located in as below:
 ```
--Dataset
+-Data
  |
  ---- train_image
  |    |
- |    ---- qus_1.tif
+ |    ---- qus_1.png
  |    |
  |    ---- …
  |
  ---- train_mask
  |    |
- |    ---- qus_1.tif
+ |    ---- qus_1.png
  |    |
  |    ---- …
  |---- test_image
  |    |
- |    ---- qus_1.tif
+ |    ---- qus_1.png
  |    |
  |    ---- …
  |---- test_mask
  |    |
- |    ---- qus_1.tif
+ |    ---- qus_1.png
  |    |
       ---- …
 ```
@@ -53,11 +53,9 @@ When you start training, it first converts each folder in dataset (train_image, 
 
 ### Evaluation
 - when training is finished, test images are also evaluated and written to the current directory as `results.npy`.
-- To show the result on the test images run:
+- `visualize_segmentation` in Main.py shows the result on the test images.
 
-    ```
-    python3 show_on_img.py 
-    ```
+   
 
 ### Citing Unet
 Ronneberger, O., Fischer, P., Brox, T.: U-net: Convolutional networks for biomedical
